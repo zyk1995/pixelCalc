@@ -100,9 +100,11 @@ Page({
         }
         this.setData({ "screenData": data });
         this.data.arr.pop();
+        break;
       case this.data.idc:
         this.setData({ "screenData": "0" });
         this.data.arr.length = 0;
+        break;
       case this.data.idt:
         var data = this.data.screenData;
         if (data == "0") {
@@ -117,6 +119,7 @@ Page({
           this.data.arr.unshift("－");
         }
         this.setData({ "screenData": data });
+        break;
       case this.data.ide:
         var data = this.data.screenData;
         if (data == "0") {
@@ -169,6 +172,7 @@ Page({
         this.data.arr.push(result);
 
         this.setData({ "screenData": result + "" });
+        break;
       default:
         if (this.data.operaSymbo[id]) { //如果是符号+-*/
           if (this.data.lastIsOperaSymbo || this.data.screenData == "0") {
